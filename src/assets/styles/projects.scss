@@ -1,0 +1,123 @@
+$secondary: #4c69b1;
+
+.project-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.arrow-button {
+  background: none;
+  border: none;
+  font-size: 3rem;
+  cursor: pointer;
+  color: $secondary;
+  transition: transform 0.2s;
+}
+
+.arrow-button:hover {
+  transform: scale(1.2);
+}
+
+.h-projects {
+  color: white;
+  display: inline-block;
+  position: relative;
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.h-projects::after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  left: 30%;
+  bottom: 10px;
+  width: 80%;
+  height: 20px;
+  background-color: #4c69b1;
+}
+
+.project-container {
+  margin: 2rem auto;
+  padding: 1rem 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.title img {
+  width: 80px;
+  height: auto;
+  margin: 1rem;
+}
+
+.description {
+  margin-top: 2rem;
+  padding: 1.5rem 3rem  ;
+  background-color: rgba(76, 105, 177, 0.8);
+  width: 100%;
+  text-align: left;
+}
+
+.description li {
+  margin-left: 2rem;
+}
+
+@media screen and (max-width: 800px) {
+  .project-container {
+    padding: 1rem 1rem;
+    margin: 1rem;
+  }
+
+  .arrow-button {
+    font-size: 2.5rem;
+  }
+
+  .project-header {
+    margin-top: 5rem;
+  }
+
+  .h-projects::after {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    left: 30%;
+    bottom: 5px;
+    width: 80%;
+    height: 10px;
+    background-color: #4c69b1;
+  }
+
+  .title {
+    height: 40%;
+  }
+
+  .two-columns {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+  }
+
+  .description {
+    margin-top: 0.5rem;
+    overflow-y: auto;
+  }
+
+  .title img {
+    width: 40px;
+  }
+}

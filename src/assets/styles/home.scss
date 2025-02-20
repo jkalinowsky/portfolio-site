@@ -1,0 +1,18 @@
+$secondary: #4c69b1;
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  margin-top: 2rem;
+}
+
+span {
+  color: $secondary;
+}
+
+@media screen and (max-width: 1000px) {
+  .buttons {
+    flex-direction: column;
+  }
+
+}
