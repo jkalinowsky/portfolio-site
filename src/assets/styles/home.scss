@@ -10,6 +10,37 @@ span {
   color: $secondary;
 }
 
+.slide-enter-active, .slide-leave-active {
+  transition: all 0.8s ease;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.slide-enter-from, .slide-leave-to {
+  opacity: 0;
+  transform: translateY(-20px);
+}
+
+.slide-left-enter-active, .slide-left-leave-active {
+  transition: all 0.8s ease;
+  opacity: 1;
+}
+
+.slide-left-enter-from, .slide-left-leave-to {
+  opacity: 0;
+  transform: translateX(-100%);
+}
+
+.slide-right-enter-active, .slide-right-leave-active {
+  transition: all 0.8s ease;
+  opacity: 1;
+}
+
+.slide-right-enter-from, .slide-right-leave-to {
+  opacity: 0;
+  transform: translateX(100%);
+}
+
 @media screen and (max-width: 1000px) {
   .buttons {
     flex-direction: column;

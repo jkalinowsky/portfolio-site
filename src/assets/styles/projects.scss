@@ -1,14 +1,23 @@
 $secondary: #4c69b1;
 
 .project-header {
+  top: 0;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
+  position: sticky;
+}
+
+.content {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: start;
 }
 
 .arrow-button {
+  margin: 0 5rem;
   background: none;
   border: none;
   font-size: 3rem;
@@ -18,7 +27,7 @@ $secondary: #4c69b1;
 }
 
 .arrow-button:hover {
-  transform: scale(1.2);
+  transform: scale(1.5);
 }
 
 .h-projects {
@@ -65,7 +74,7 @@ $secondary: #4c69b1;
 }
 
 .description {
-  margin-top: 2rem;
+  margin-top: 1rem;
   padding: 1.5rem 3rem  ;
   background-color: rgba(76, 105, 177, 0.8);
   width: 100%;
@@ -76,10 +85,38 @@ $secondary: #4c69b1;
   margin-left: 2rem;
 }
 
+.github {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.github a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+}
+
+.github b {
+  margin-left: 0.5rem;
+}
+
+.github img {
+  width: 30px;
+  height: auto;
+  display: block;
+}
+
 @media screen and (max-width: 800px) {
   .project-container {
     padding: 1rem 1rem;
     margin: 1rem;
+  }
+
+  .content {
+    height: 70vh;
   }
 
   .arrow-button {
@@ -87,7 +124,7 @@ $secondary: #4c69b1;
   }
 
   .project-header {
-    margin-top: 5rem;
+    margin-top: 1rem;
   }
 
   .h-projects::after {
@@ -101,10 +138,6 @@ $secondary: #4c69b1;
     background-color: #4c69b1;
   }
 
-  .title {
-    height: 40%;
-  }
-
   .two-columns {
     flex-direction: column;
     justify-content: center;
@@ -113,11 +146,18 @@ $secondary: #4c69b1;
   }
 
   .description {
-    margin-top: 0.5rem;
+    margin-top: 3rem;
+    max-height: 30rem;
     overflow-y: auto;
   }
 
   .title img {
     width: 40px;
+  }
+}
+
+@media screen and (max-height: 830px) {
+  .description {
+    max-height: 18rem;
   }
 }
