@@ -42,7 +42,7 @@ $secondary: #7994d6;
 
 .navbar li {
   font-size: 1.2rem;
-  padding: 0.5rem 1rem;
+  padding: 0.2rem 0.5rem;
   margin-right: 2rem;
   cursor: pointer;
   transition: all ease 0.2s;
@@ -50,6 +50,7 @@ $secondary: #7994d6;
 
 .navbar li:hover {
   color: $secondary;
+  transform: scale(1.2);
 }
 
 .slide-enter-active, .slide-leave-active {
@@ -77,5 +78,10 @@ $secondary: #7994d6;
 
   .navbar li {
     margin: 0 2rem;
+  }
+
+  .navbar li:hover {
+    color: $secondary;
+    transform: scale(1);
   }
 }

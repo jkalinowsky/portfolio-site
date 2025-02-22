@@ -3,14 +3,17 @@ import { ref, markRaw } from 'vue';
 import HomeView from "@/components/HomeView.vue";
 import AboutView from "@/components/AboutView.vue";
 import ProjectView from '@/components/ProjectView.vue';
+import ContactView from '@/components/ContactView.vue'
 
 const views = {
   HomeView: markRaw(HomeView),
   AboutView: markRaw(AboutView),
-  ProjectView: markRaw(ProjectView)
+  ProjectView: markRaw(ProjectView),
+  ContactView: markRaw(ContactView)
 };
 
 const currentView = ref(views.HomeView);
+const isNavOpen = ref(false);
 
 const changeView = (viewName: keyof typeof views) => {
   currentView.value = views[viewName];
@@ -36,11 +39,25 @@ const particlesLoaded = async (container: typeof Container) => {
     <keep-alive>
       <component :is="currentView" :changeView="changeView" />
     </keep-alive>
+
+
+    <button class="nav-toggle" @click="isNavOpen = !isNavOpen">☰</button>
+    <transition name="slide">
+      <nav v-if="isNavOpen" class="navbar">
+        <ul>
+          <li @click="changeView('HomeView')"> Home </li>
+          <li @click="changeView('AboutView')"> About me </li>
+          <li @click="changeView('ProjectView')"> Projects </li>
+          <li @click="changeView('ContactView')"> Contact me </li>
+        </ul>
+      </nav>
+    </transition>
   </div>
 </template>
 
 <style lang="scss">
 @import "@/assets/styles/main.scss";
+@import "@/assets/styles/navbar.scss";
 #app {
   position: fixed;
   width: 100%;

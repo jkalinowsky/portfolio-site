@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "run-p type-check \"build-only {@}\" --",
+    "build": "vite build",
     "preview": "vite preview",
     "build-only": "vite build",
     "type-check": "vue-tsc --build",
@@ -15,6 +15,7 @@
   "dependencies": {
     "@tsparticles/vue3": "^3.0.1",
     "sass": "^1.85.0",
+    "serve": "^14.2.4",
     "tsparticles": "^3.8.1",
     "vue": "^3.5.13"
   },

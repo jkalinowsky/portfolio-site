@@ -1,6 +1,7 @@
 import cPlusPlus from '@/assets/c++.png'
 import vueLogo from '@/assets/vue.png'
 import pythonLogo from '@/assets/python.png'
+import springLogo from '@/assets/spring.png'
 
 export const particlesConfig = {
   autoPlay: true,
@@ -297,7 +298,7 @@ export const particlesConfig = {
       },
       limit: {
         mode: "delete",
-        value: 0
+        value: 70
       },
       value: 80
     },
@@ -343,6 +344,11 @@ export const particlesConfig = {
           },
           {
             src: pythonLogo,
+            width: 50,
+            height: 50,
+          },
+          {
+            src: springLogo,
             width: 50,
             height: 50,
           },

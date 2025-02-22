@@ -18,6 +18,10 @@ export default {
       <img src="/src/assets/gradient-logo.png" alt="">
     </div>
     <div class="description">
+      <div class="github">
+        <a href="https://github.com/Gradient-PG/OCR-Web"><img src="/src/assets/github-logo.png"> <b>Check github</b></a>
+      </div>
+      <p>Application is in the last stage of development (check branch dev if want too see the latest code:))</p>
       <h3>Description</h3>
       <p>This web application was developed to assist the Polish Red Cross in migrating to an
         online system for managing honorary blood donor cards. It provides an interface for
@@ -33,7 +37,7 @@ export default {
       <h3>Stack</h3>
       <p><b>Backend: </b>Flask, MongoDB</p>
       <p><b>Frontend: </b>Vue, Vite, Bootstrap</p>
-      <p>Docker, Git, Postman</p>
+      <p><b>Additional tools: </b>Docker, Git, Postman</p>
       <h3>My role</h3>
       <p>
         This project was developed by scientific group Gradient for Polish Red Cross. The team working on this
