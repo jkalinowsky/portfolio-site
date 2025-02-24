@@ -17,6 +17,7 @@ const isNavOpen = ref(false);
 
 const changeView = (viewName: keyof typeof views) => {
   currentView.value = views[viewName];
+  isNavOpen.value = false;
 };
 
 

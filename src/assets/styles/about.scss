@@ -126,8 +126,13 @@ img {
   }
 }
 
-@media screen and (max-height: 830px) {
+@media screen and (max-height: 830px) and (max-width: 800px) {
   .stack {
     overflow-y: auto;
+    margin-bottom: 1rem;
+  }
+
+  .about-me {
+    min-height: 10rem;
   }
 }
