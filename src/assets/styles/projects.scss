@@ -1,5 +1,9 @@
 $secondary: #4c69b1;
 
+h3 {
+  text-align: left;
+}
+
 .project-header {
   top: 0;
   width: 100%;
@@ -17,7 +21,7 @@ $secondary: #4c69b1;
 }
 
 .arrow-button {
-  margin: 0 5rem;
+  margin: 2.2rem 15rem;
   background: none;
   border: none;
   font-size: 3rem;
@@ -28,25 +32,6 @@ $secondary: #4c69b1;
 
 .arrow-button:hover {
   transform: scale(1.5);
-}
-
-.h-projects {
-  color: white;
-  display: inline-block;
-  position: relative;
-  margin-top: 1.5rem;
-  margin-bottom: 2rem;
-}
-
-.h-projects::after {
-  z-index: -1;
-  content: "";
-  position: absolute;
-  left: 30%;
-  bottom: 10px;
-  width: 80%;
-  height: 20px;
-  background-color: #4c69b1;
 }
 
 .project-container {
@@ -78,7 +63,8 @@ $secondary: #4c69b1;
   padding: 1.5rem 3rem  ;
   background-color: rgba(76, 105, 177, 0.8);
   width: 100%;
-  text-align: left;
+  border-radius: 0.5rem;
+  text-align: left !important;
 }
 
 .description li {
@@ -127,17 +113,6 @@ $secondary: #4c69b1;
     margin-top: 1rem;
   }
 
-  .h-projects::after {
-    z-index: -1;
-    content: "";
-    position: absolute;
-    left: 30%;
-    bottom: 5px;
-    width: 80%;
-    height: 10px;
-    background-color: #4c69b1;
-  }
-
   .two-columns {
     flex-direction: column;
     justify-content: center;
@@ -158,6 +133,7 @@ $secondary: #4c69b1;
 
 @media screen and (max-height: 830px) {
   .description {
-    max-height: 18rem;
+    overflow-y: auto;
+    max-height: 22rem;
   }
 }

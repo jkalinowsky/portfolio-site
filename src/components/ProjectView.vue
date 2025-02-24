@@ -27,7 +27,7 @@
   <div class="container">
     <div class="project-header">
       <button @click="changeProject('prev')" class="arrow-button left">&#9665;</button>
-      <h1 class="h-projects">Projects</h1>
+      <h1 class="h-title">Projects</h1>
       <button @click="changeProject('next')" class="arrow-button right">&#9655;</button>
     </div>
     <div class="content">
