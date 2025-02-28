@@ -1,32 +1,36 @@
-<script setup lang="ts">
-import { ref, markRaw } from 'vue';
-import HomeView from "@/components/HomeView.vue";
-import AboutView from "@/components/AboutView.vue";
-import ProjectView from '@/components/ProjectView.vue';
-import ContactView from '@/components/ContactView.vue'
-
-const views = {
-  HomeView: markRaw(HomeView),
-  AboutView: markRaw(AboutView),
-  ProjectView: markRaw(ProjectView),
-  ContactView: markRaw(ContactView)
-};
-
-const currentView = ref(views.HomeView);
-const isNavOpen = ref(false);
-
-const changeView = (viewName: keyof typeof views) => {
-  currentView.value = views[viewName];
-  isNavOpen.value = false;
-};
-
-
+<script lang="ts">
+import { markRaw } from 'vue';
 import { particlesConfig } from '@/assets/particlesConfig'
 import type Container from "@tsparticles/vue3";
+import HomeView from "@/components/HomeView.vue"
+import AboutView from "@/components/AboutView.vue"
+import ProjectView from '@/components/ProjectView.vue'
+import ContactView from '@/components/ContactView.vue'
 
-const particlesLoaded = async (container: typeof Container) => {
-  console.log("Particles container loaded", container);
-};
+export default {
+  data() {
+    return {
+      views: {
+        HomeView: markRaw(HomeView),
+        AboutView: markRaw(AboutView),
+        ProjectView: markRaw(ProjectView),
+        ContactView: markRaw(ContactView)
+      },
+      currentView: this.view.HomeView,
+      isNavOpen: false,
+      pC: particlesConfig
+    }
+  },
+  methods: {
+    changeView(viewName: keyof typeof this.views) {
+      this.currentView.value = this.views[viewName];
+      this.isNavOpen.value = false;
+    },
+    async particlesLoaded(container: typeof Container) {
+      console.log("Particles container loaded", container);
+    }
+  }
+}
 </script>
 
 <template>
@@ -34,7 +38,7 @@ const particlesLoaded = async (container: typeof Container) => {
     <vue-particles
       id="tsparticles"
       @particles-loaded="particlesLoaded"
-      :options="particlesConfig"
+      :options="this.pC"
     />
 
     <keep-alive>

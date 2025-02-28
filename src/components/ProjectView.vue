@@ -1,26 +1,34 @@
-<script setup lang="ts">
-  import P1View from '@/components/projects/P1View.vue'
-  import P2View from '@/components/projects/P2View.vue'
-  import P3View from '@/components/projects/P3View.vue'
-  import { markRaw, ref } from 'vue'
-
-  const projects = [
-    { name: "Project1", component: markRaw(P1View) },
-    { name: "Project2", component: markRaw(P2View) },
-    { name: "Project3", component: markRaw(P3View) }
-  ];
-
-  const currentIndex = ref(0);
-  const currentProject = ref(projects[currentIndex.value].component);
-
-  const changeProject = (direction: 'prev' | 'next') => {
-    if (direction === 'prev') {
-      currentIndex.value = (currentIndex.value - 1 + projects.length) % projects.length;
-    } else {
-      currentIndex.value = (currentIndex.value + 1) % projects.length;
+<script lang="ts">
+import { markRaw } from 'vue'
+import P1View from '@/components/projects/P1View.vue'
+import P2View from '@/components/projects/P2View.vue'
+import P3View from '@/components/projects/P3View.vue'
+export default {
+  data() {
+    return {
+      projects: [
+        {name: "Project1", component: markRaw(P1View)},
+        {name: "Project2", component: markRaw(P2View)},
+        {name: "Project3", component: markRaw(P3View)}
+      ],
+      currentIndex: 0,
+      currentProject: null as any,
     }
-    currentProject.value = projects[currentIndex.value].component;
-  };
+  },
+  mounted() {
+    this.currentProject = this.projects[this.currentIndex.value].component
+  },
+  methods: {
+    changeProject(direction: 'prev' | 'next') {
+      if (direction === 'prev') {
+        this.currentIndex = (this.currentIndex - 1 + this.projects.length) % this.projects.length;
+      } else {
+        this.currentIndex = (this.currentIndex + 1) % this.projects.length;
+      }
+      this.currentProject = this.projects[this.currentIndex].component;
+    }
+  }
+}
  </script>
 
 <template>
