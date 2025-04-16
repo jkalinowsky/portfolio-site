@@ -24,32 +24,28 @@
           <h3>Languages</h3>
           <div class="images-row">
             <div class="image-container">
-              <img src="@/assets/c++.png" alt="">
-              <span class="image-text">C++</span>
-            </div>
-            <div class="image-container">
-              <img src="@/assets/c.png" alt="">
-              <span class="image-text">C</span>
-            </div>
-            <div class="image-container">
-              <img src="@/assets/python.png" alt="">
-              <span class="image-text">Python</span>
-            </div>
-            <div class="image-container">
-              <img src="@/assets/js.png" alt="">
+              <img src="https://skillicons.dev/icons?i=js" alt="">
               <span class="image-text">JavaScript</span>
             </div>
             <div class="image-container">
-              <img src="@/assets/ts.png" alt="">
+              <img src="https://skillicons.dev/icons?i=ts" alt="">
               <span class="image-text">TypeScript</span>
             </div>
             <div class="image-container">
-              <img src="@/assets/sass.png" alt="">
-              <span class="image-text">Sass</span>
+              <img src="https://skillicons.dev/icons?i=python" alt="">
+              <span class="image-text">Python</span>
             </div>
             <div class="image-container">
-              <img src="@/assets/java.png" alt="">
-              <span class="image-text">Java</span>
+              <img src="https://skillicons.dev/icons?i=cpp" alt="">
+              <span class="image-text">C++</span>
+            </div>
+            <div class="image-container">
+              <img src="https://skillicons.dev/icons?i=c" alt="">
+              <span class="image-text">C</span>
+            </div>
+            <div class="image-container">
+              <img src="https://skillicons.dev/icons?i=sass" alt="">
+              <span class="image-text">Sass</span>
             </div>
           </div>
         </div>
@@ -59,16 +55,28 @@
           <div class="images-row">
             <div class="images-row">
               <div class="image-container">
-                <img src="@/assets/vue.png" alt="">
-                <span class="image-text">Vue</span>
+                <img src="https://skillicons.dev/icons?i=vue" alt="">
+                <span class="image-text">Vue.js</span>
               </div>
               <div class="image-container">
-                <img src="@/assets/flask.png" alt="">
+                <img src="https://skillicons.dev/icons?i=react" alt="">
+                <span class="image-text">React</span>
+              </div>
+              <div class="image-container">
+                <img src="https://skillicons.dev/icons?i=flask" alt="">
                 <span class="image-text">Flask</span>
               </div>
               <div class="image-container">
-                <img src="@/assets/spring.png" alt="">
-                <span class="image-text">Spring</span>
+                <img src="https://skillicons.dev/icons?i=fastapi" alt="">
+                <span class="image-text">FastApi</span>
+              </div>
+              <div class="image-container">
+                <img src="https://skillicons.dev/icons?i=bootstrap" alt="">
+                <span class="image-text">Bootstrap</span>
+              </div>
+              <div class="image-container">
+                <img src="https://skillicons.dev/icons?i=tailwind" alt="">
+                <span class="image-text">TailwindCSS</span>
               </div>
             </div>
           </div>
@@ -77,16 +85,20 @@
           <h3>Tools</h3>
           <div class="images-row">
             <div class="image-container">
-              <img src="@/assets/git.png" alt="">
+              <img src="https://skillicons.dev/icons?i=git" alt="">
               <span class="image-text">Git</span>
             </div>
             <div class="image-container">
-              <img src="@/assets/docker.png" alt="">
+              <img src="https://skillicons.dev/icons?i=docker" alt="">
               <span class="image-text">Docker</span>
             </div>
             <div class="image-container">
-              <img src="@/assets/postgresql.png" alt="">
+              <img src="https://skillicons.dev/icons?i=postgres" alt="">
               <span class="image-text">PostgreSQL</span>
+            </div>
+            <div class="image-container">
+              <img src="https://skillicons.dev/icons?i=postman" alt="">
+              <span class="image-text">Postman</span>
             </div>
         </div>
         </div>

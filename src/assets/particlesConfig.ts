@@ -1,7 +1,7 @@
-import cPlusPlus from '@/assets/c++.png'
-import vueLogo from '@/assets/vue.png'
-import pythonLogo from '@/assets/python.png'
-import springLogo from '@/assets/spring.png'
+import dockerLogo from '@/assets/Docker.svg'
+import vueLogo from '@/assets/VueJS-Light.svg'
+import pythonLogo from '@/assets/Python-Light.svg'
+import fastapiLogo from '@/assets/FastAPI.svg'
 
 export const particlesConfig = {
   autoPlay: true,
@@ -333,7 +333,7 @@ export const particlesConfig = {
       options: {
         images: [
           {
-            src: cPlusPlus,
+            src: fastapiLogo,
             width: 50,
             height: 50,
           },
@@ -348,7 +348,7 @@ export const particlesConfig = {
             height: 50,
           },
           {
-            src: springLogo,
+            src: dockerLogo,
             width: 50,
             height: 50,
           },

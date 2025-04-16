@@ -3,20 +3,24 @@ import { markRaw } from 'vue'
 import P1View from '@/components/projects/P1View.vue'
 import P2View from '@/components/projects/P2View.vue'
 import P3View from '@/components/projects/P3View.vue'
+
+type Project = {
+  name: string;
+  component: any;
+};
+
 export default {
   data() {
+    const projects: Project[] = [
+      { name: "Project1", component: markRaw(P1View) },
+      { name: "Project2", component: markRaw(P2View) },
+      { name: "Project3", component: markRaw(P3View) }
+    ];
     return {
-      projects: [
-        {name: "Project1", component: markRaw(P1View)},
-        {name: "Project2", component: markRaw(P2View)},
-        {name: "Project3", component: markRaw(P3View)}
-      ],
+      projects,
       currentIndex: 0,
-      currentProject: null as any,
+      currentProject: projects[0].component
     }
-  },
-  mounted() {
-    this.currentProject = this.projects[this.currentIndex.value].component
   },
   methods: {
     changeProject(direction: 'prev' | 'next') {

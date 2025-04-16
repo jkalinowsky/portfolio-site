@@ -16,7 +16,10 @@ export default {
       <h2>Quiz application for students</h2>
     </div>
     <div class="description">
-      <p>The application is <b>still in development</b>, and the code is not yet public.
+      <div class="github">
+        <a href="https://github.com/jkalinowsky/fishka/"><img src="/src/assets/github-logo.png"> <b>Check github</b></a>
+      </div>
+      <p>The application is <b>still in development</b>, and the code is public. Backend is done in some part.
         However, if you're interested in the project, feel free to reach out.</p>
 
       <h3>Description and idea</h3>
@@ -39,9 +42,10 @@ export default {
         <li><b>Website Appearance:</b> a strong focus on clean, intuitive and response website.</li>
       </ul>
       <h3>Stack</h3>
-      <p><b>Backend: </b>Java Spring Boot, PostgreSQL</p>
-      <p><b>Frontend: </b>Vue, Vite, Bootstrap</p>
-      <p><b>Additional tools: </b>Docker, Git, Postman</p>
+      <p><b>Backend: </b>FastApi, PostgreSQL</p>
+      <p><b>Frontend: </b>Angular, Bootstrap</p>
+      <p><b>Additional tools: </b>Docker, Git, Postman, Github Actions</p>
+      <p>We also use home server for CI/CD via ssh.</p>
     </div>
   </div>
 </template>

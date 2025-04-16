@@ -7,28 +7,28 @@ import AboutView from "@/components/AboutView.vue"
 import ProjectView from '@/components/ProjectView.vue'
 import ContactView from '@/components/ContactView.vue'
 
+type ViewName = 'HomeView' | 'AboutView' | 'ProjectView' | 'ContactView';
+
 export default {
   data() {
+    const views = {
+      HomeView: markRaw(HomeView),
+      AboutView: markRaw(AboutView),
+      ProjectView: markRaw(ProjectView),
+      ContactView: markRaw(ContactView)
+    }
     return {
-      views: {
-        HomeView: markRaw(HomeView),
-        AboutView: markRaw(AboutView),
-        ProjectView: markRaw(ProjectView),
-        ContactView: markRaw(ContactView)
-      },
-      currentView: this.view.HomeView,
+      views,
+      currentView: views.HomeView,
       isNavOpen: false,
       pC: particlesConfig
     }
   },
   methods: {
-    changeView(viewName: keyof typeof this.views) {
-      this.currentView.value = this.views[viewName];
-      this.isNavOpen.value = false;
+    changeView(viewName: ViewName) {
+      this.currentView = this.views[viewName];
+      this.isNavOpen = false;
     },
-    async particlesLoaded(container: typeof Container) {
-      console.log("Particles container loaded", container);
-    }
   }
 }
 </script>
@@ -38,7 +38,7 @@ export default {
     <vue-particles
       id="tsparticles"
       @particles-loaded="particlesLoaded"
-      :options="this.pC"
+      :options="pC"
     />
 
     <keep-alive>

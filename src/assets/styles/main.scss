@@ -1,9 +1,33 @@
 $secondary: #4c69b1;
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   color: white;
+
+  font-family: 'Montserrat', sans-serif;
+
+  scrollbar-width: thin;
+  scrollbar-color: #4a90e2 #f0f0f0;
+}
+
+*::-webkit-scrollbar {
+  width: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #f0f0f0;
+  border-radius: 4px;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: #4a90e2;
+  border-radius: 4px;
+  border: 2px solid #f0f0f0;
+}
+*::-webkit-scrollbar-thumb:hover {
+  background-color: #357ab8;
 }
 
 h1 {

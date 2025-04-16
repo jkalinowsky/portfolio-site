@@ -30,7 +30,7 @@ export default {
       </p>
       <h3>Stack</h3>
       <p><b>Frontend: </b>Vue, Vite, saas</p>
-      <p><b>Other:</b> Github Pages (for deployment), git</p>
+      <p><b>Other:</b> Github Pages (for deployment), Git</p>
     </div>
   </div>
 </template>
